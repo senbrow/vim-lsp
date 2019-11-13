@@ -83,7 +83,7 @@ function! s:clear_all_highlights() abort
                     \ 'type': l:prop_type,
                     \ 'bufnr': l:bufnr,
                     \ 'all': v:true,
-                    \ })
+                    \ }, 1, line('$'))
             endif
         endfor
 
@@ -107,7 +107,7 @@ function! s:clear_highlights(server_name, path) abort
             \ 'type': l:prop_type,
             \ 'bufnr': l:bufnr,
             \ 'all': v:true,
-            \ })
+            \ }, 1, line('$'))
     endfor
 endfunction
 
